@@ -1,6 +1,7 @@
-package edu.akshay.travelogue.domain;
+package travelogue.app.domain.passengers;
 
-import edu.akshay.travelogue.domain.entities.Activity;
+import travelogue.app.domain.valueobjects.PassengerType;
+import travelogue.app.domain.entities.Activity;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

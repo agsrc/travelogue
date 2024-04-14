@@ -1,12 +1,14 @@
-package edu.akshay.travelogue.domain;
+package travelogue.app.domain.passengers;
 
-import edu.akshay.travelogue.domain.PassengerType;
-import edu.akshay.travelogue.domain.entities.Activity;
+import travelogue.app.domain.valueobjects.PassengerType;
+import travelogue.app.domain.entities.Activity;
 
 import java.util.List;
 
 public interface Passenger {
 
+    String getName();
+    int getPassengerNumber();
     PassengerType getPassengerType();
 
     void printDetails();

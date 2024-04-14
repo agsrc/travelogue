@@ -1,8 +1,8 @@
-package edu.akshay.travelogue.domain;
+package travelogue.app.domain.services;
 
-import edu.akshay.travelogue.domain.entities.Activity;
-import edu.akshay.travelogue.domain.entities.Destination;
-import edu.akshay.travelogue.domain.entities.TravelPackage;
+import travelogue.app.domain.entities.Activity;
+import travelogue.app.domain.entities.Destination;
+import travelogue.app.domain.entities.TravelPackage;
 
 public class ItineraryPrinter {
 

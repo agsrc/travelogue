@@ -1,10 +1,10 @@
-package edu.akshay.travelogue.domain;
+package travelogue.app.domain.passengers;
 
 import lombok.*;
 
 
 @Data
-public class BasePassenger {
+public abstract class BasePassenger {
     private String name;
     private int passengerNumber;
 

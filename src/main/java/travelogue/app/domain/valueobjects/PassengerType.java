@@ -1,4 +1,4 @@
-package edu.akshay.travelogue.domain;
+package travelogue.app.domain.valueobjects;
 
 public enum PassengerType {
     STANDARD,

@@ -1,6 +1,6 @@
-package edu.akshay.travelogue.domain;
+package travelogue.app.domain.entities;
 
-import lombok.*;
+import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,20 +11,16 @@ import java.util.List;
 
 @Entity
 @Data
-public class TravelPackage {
+public class Destination {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private int passengerCapacity;
 
-    @OneToMany(mappedBy = "travelPackage")
-    private List<Destination> itinerary;
+    @OneToMany(mappedBy = "destination")
+    private List<Activity> activities;
 
-    @OneToMany(mappedBy = "travelPackage")
-    private List<Passenger> passengers;
-
-
-
+    // Constructors, getters, and setters
 }
+

@@ -1,10 +1,6 @@
-package edu.akshay.travelogue.domain;
+package travelogue.app.domain.entities;
 
-import edu.akshay.travelogue.domain.Destination;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
 
 import javax.persistence.*;
 
