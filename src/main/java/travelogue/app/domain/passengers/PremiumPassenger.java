@@ -1,11 +1,11 @@
 package travelogue.app.domain.passengers;
 
-import travelogue.app.domain.valueobjects.PassengerType;
-import travelogue.app.domain.entities.Activity;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import travelogue.app.domain.entities.Activity;
+import travelogue.app.domain.valueobjects.PassengerType;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -36,16 +36,16 @@ public class PremiumPassenger implements Passenger {
 
     @Override
     public void printDetails() {
-
+        // TODO : check again, seems like code duplication
     }
 
     @Override
     public void signUpForActivity(Activity activity) {
-
+        signedUpActivities.add(activity);
     }
 
     @Override
     public List<Activity> getSignedUpActivitiesWithDetails() {
-        return null;
+        return signedUpActivities;
     }
 }
