@@ -1,16 +1,14 @@
 package travelogue.app.domain.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Data
+@AllArgsConstructor
 public class Destination {
 
     @Id
@@ -21,6 +19,8 @@ public class Destination {
     @OneToMany(mappedBy = "destination")
     private List<Activity> activities;
 
-    // Constructors, getters, and setters
+    public Destination(String name) {
+        this.name = name;
+    }
 }
 

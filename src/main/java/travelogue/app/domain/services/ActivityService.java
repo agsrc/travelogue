@@ -5,12 +5,13 @@ import travelogue.app.domain.entities.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class ActivityService {
 
     private List<Activity> activities; // In-memory list of activities
 
-    public ActivityService() {
-        this.activities = new ArrayList<>();
+    public ActivityService(List<Activity> activities) {
+        this.activities = activities;
     }
 
     public void printActivitiesWithAvailableSpaces(int bookedCount) {

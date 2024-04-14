@@ -1,17 +1,15 @@
 package travelogue.app.domain.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import travelogue.app.domain.passengers.Passenger;
-import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Data
+@AllArgsConstructor
 public class TravelPackage {
 
     @Id
@@ -25,7 +23,5 @@ public class TravelPackage {
 
     @OneToMany(mappedBy = "travelPackage")
     private List<Passenger> passengers;
-
-
 
 }
