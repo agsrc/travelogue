@@ -1,17 +1,33 @@
-package edu.akshay.travelogue.domain;
+package travelogue.app.domain.passengers;
 
-import edu.akshay.travelogue.domain.entities.Activity;
-import lombok.Data;
+import lombok.*;
+import travelogue.app.domain.valueobjects.PassengerType;
+import travelogue.app.domain.entities.Activity;
 
 import javax.persistence.Entity;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
-@Data
-public class StandardPassenger implements PayingPassenger {
-    private String name;
-    private int passengerNumber;
+@AllArgsConstructor
+@Getter
+@Setter
+public class StandardPassenger extends BasePassenger implements PayingPassenger {
     private double balance;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        StandardPassenger that = (StandardPassenger) o;
+        return Double.compare(that.balance, balance) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), balance);
+    }
 
     @Override
     public PassengerType getPassengerType() {
